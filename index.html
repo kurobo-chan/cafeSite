@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gluten&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "lul3uco",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body onscroll="scrollFunc()">
+    <div class="headerBlock">
+      <div class="header-head">
+        <header class="header partsGrid">
+          <div class="header-container">
+            <div class="site">
+              <a href="index.html"> yamacafe </a>
+            </div>
+            <div class="buttonBlock">
+              <button class="storeInfo">
+                <i class="fas fa-store"></i>
+                <span>店舗案内</span>
+              </button>
+              <button class="online">
+                <i class="fas fa-shopping-cart"></i>
+                <span>オンライン</span>
+              </button>
+              <button class="navBtn" onclick="navFunc()">
+                <i class="fas fa-bars"></i>
+                <span>メニュー</span>
+              </button>
+            </div>
+          </div>
+        </header>
+        <div class="custom-shape-divider-top-1633711193">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+      </div>
+      <nav class="nav">
+        <ul class="nav-container">
+          <li>
+            <a href="index.html">
+              <span class="nav-image">
+                <img src="/images/coffee.svg" alt="" />
+              </span>
+              <span class="nav-text">ホーム</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="nav-image">
+                <img src="/images/Apple.svg" alt="" />
+              </span>
+              <span class="nav-text">お知らせ</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="nav-image">
+                <img src="/images/croissant.svg" alt="" />
+              </span>
+              <span class="nav-text">営業時間</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="nav-image">
+                <img src="/images/eggToast.svg" alt="" />
+              </span>
+              <span class="nav-text">こだわりメニュー</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <section class="hero partsGrid">
+      <img src="/images/hero.jpeg" alt="定番コーヒー" class="hero-image" />
+      <div class="hero-container grid12">
+        <div class="hero-text">
+          <h1>豆や茶葉、ミルク、キャラメルなどの素材にこだ わった一杯</h1>
+        </div>
+        <div class="scrollBtn">
+          <a href="main" class="scroll-container">
+            <span class="scroll-icon"
+              ><img src="/images/coffee-icon.svg" alt=""
+            /></span>
+            <span class="scroll-test">scroll</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <main class="main" id="main">
+      <section class="order partsGrid target anm-up">
+        <div class="order-container grid12">
+          <button class="orderBtn">
+            <span class="order-en">Order online</span>
+            <span class="order-jp">オンライン注文</span>
+          </button>
+        </div>
+      </section>
+      <section class="news partsGrid target anm-up">
+        <div class="news-container grid12">
+          <h2 class="title">
+            <span class="title-container">
+              <span class="title-en">What's New</span>
+              <span class="title-jp">お知らせ＆新着情報</span>
+            </span>
+          </h2>
+          <div class="news-posts">
+            <dl class="news-post">
+              <dt>2020年2月1日</dt>
+              <dd>
+                お持ち帰りスイーツにバレンタインパックが仲間入りしました。
+              </dd>
+            </dl>
+            <dl class="news-post">
+              <dt>2020年1月1日</dt>
+              <dd>
+                恒例の「旧正月ご来光カフェ」を１月25日午前6時より前岳山頂で開催します。
+              </dd>
+            </dl>
+            <dl class="news-post">
+              <dt>2019年12月26日</dt>
+              <dd>
+                恒例の「旧正月ご来光カフェ」を１月25日午前6時より前岳山頂で開催します。
+              </dd>
+            </dl>
+            <dl class="news-post">
+              <dt>2019年12月20日</dt>
+              <dd>クリスマスプレートのご予約は23日までとなっております。</dd>
+            </dl>
+          </div>
+          <a href="#" class="moreBtn">
+            <span class="moreBtn-container">
+              <span class="btn-text">お知らせ一覧</span>
+              <span class="btn-icon"><i class="fas fa-chevron-right"></i></span>
+            </span>
+          </a>
+        </div>
+      </section>
+      <section class="recruit partsGrid target anm-up">
+        <div class="recruit-container grid12">
+          <a href="#" class="recruitBtn">
+            <span class="btn-container">
+              <span class="btn-en title-en">recruit</span>
+              <span class="btn-jp title-jp">求人・採用情報</span>
+            </span>
+          </a>
+        </div>
+      </section>
+      <section class="menu target anm-up">
+        <div class="menu-container">
+          <h2 class="title">
+            <span class="title-container">
+              <span class="title-en">Food & Drink</span>
+              <span class="title-jp">こだわり素材のメニュー</span>
+            </span>
+          </h2>
+          <div
+            class="slides target anm-up"
+            data-flickity='{ "wrapAround": true,"autoPlay": true }'
+          >
+            <div class="slide-cell">
+              <a href="#">
+                <img src="/images/hero.jpeg" alt="" />
+                <span class="btn-container">
+                  <span class="btn-en title-en">standard</span>
+                  <span class="btn-jp title-jp">定番カフェ</span>
+                </span>
+              </a>
+            </div>
+            <div class="slide-cell">
+              <a href="#">
+                <img src="/images/special.jpeg" alt="" />
+                <span class="btn-container">
+                  <span class="btn-en title-en">special</span>
+                  <span class="btn-jp title-jp">季節のスペシャルプレート</span>
+                </span>
+              </a>
+            </div>
+            <div class="slide-cell">
+              <a href="#">
+                <img src="/images/sweets.jpeg" alt="" />
+                <span class="btn-container">
+                  <span class="btn-en title-en">sweets</span>
+                  <span class="btn-jp title-jp">お持ち帰りスイーツ</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <aside class="aside">
+      <section class="hours target anm-up">
+        <div class="hours-container">
+          <h2 class="title">
+            <span class="title-container">
+              <span class="title-en">HOURS</span>
+              <span class="title-jp">営業時間</span>
+            </span>
+          </h2>
+          <div class="hours-text">
+            <dl>
+              <dt>月～金</dt>
+              <dd>7:00 am - 9:00 pm</dd>
+            </dl>
+            <dl>
+              <dt>土～日</dt>
+              <dd>9:00 am - 8:00 pm</dd>
+            </dl>
+          </div>
+        </div>
+        <div class="hours-images">
+          <div class="images-container">
+            <figure class="croissant">
+              <img src="/images/croissant.svg" alt="" />
+            </figure>
+            <figure class="coffee">
+              <img src="/images/coffee.svg" alt="" />
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section class="access partsGrid target anm-up">
+        <div class="access-container grid12">
+          <div class="text-container">
+            <h2 class="title">
+              <span class="title-container">
+                <span class="title-en">Accesss</span>
+                <span class="title-jp">アクセス</span>
+              </span>
+            </h2>
+            <p>
+              〒901-3125 <br />
+              沖縄県島尻郡久米島町字鳥島グスク<br />
+              TEL:0997-1234-5678
+            </p>
+          </div>
+          <div class="map">
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28216.45785451813!2d128.21069003577398!3d27.86951222495557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e24fa8664545ef%3A0x32ffea92678f1a6!2z44Kw44K544Kv54Gr5bGx!5e0!3m2!1sja!2sjp!4v1634300234202!5m2!1sja!2sjp"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </aside>
+    <footer class="footer partsGrid target anm-up">
+      <div class="footer-container">
+        <div class="site">
+          <a href="index.html"> yamacafe </a>
+          <span>ヤマカフェ</span>
+        </div>
+        <ul class="footer-sns">
+          <li class="twitter">
+            <a href="#"
+              ><i class="fab fa-twitter"></i>
+              <span class="sr-only">Twitter</span>
+            </a>
+          </li>
+          <li class="facebook">
+            <a href="#"
+              ><i class="fab fa-facebook"></i>
+              <span class="sr-only">Facebook</span>
+            </a>
+          </li>
+          <li class="instagram">
+            <a href="#"
+              ><i class="fab fa-instagram"></i>
+              <span class="sr-only">Instagram</span>
+            </a>
+          </li>
+        </ul>
+        <p class="copyLight">copylight © yamacafe</p>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
